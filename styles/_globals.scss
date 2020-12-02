@@ -1,0 +1,142 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Public sans', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: $font-md;
+    line-height: 1.3;
+
+    @include breakpoint-up(large){
+        font-size: $font-lg;
+    }
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+h1,h2,h3,h4 {
+    margin-top: 0;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+
+//Spacing
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall {
+        padding-top: 4.375rem;     
+        padding-bottom: 2.25rem; 
+        padding-right: 1.5rem;       
+        padding-left: 1.5rem;
+
+        @include breakpoint-up(large) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--py {
+        padding-top: 4.375rem;     
+        padding-bottom: 2.25rem;      
+
+        @include breakpoint-up(large) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        
+    }
+
+    &--px {
+        padding-right: 1.5rem;       
+        padding-left: 1.5rem;
+    }
+
+    &--pt {
+    padding-top: 4.375rem;     
+
+    @include breakpoint-up(large) {
+        padding-top: 6rem;
+    }
+    }
+
+    &--pr {
+    padding-right: 1.5rem;       
+    }
+
+    &--pb {
+    padding-bottom: 2.25rem;
+    
+    @include breakpoint-up(large) {
+        padding-bottom: 6rem;
+    }
+    }
+
+    &--pl {
+    padding-left: 1.5rem;
+    }
+
+
+}
+
+//Flexbox styles
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Buttons 
+button, .button {
+
+    display: inline-block;
+    padding: 0.875rem 2.1875rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(41,22,111,0.85) 50%, rgba(218,37,28,0.85) 100%);
+    color: $white;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: 400ms ease-in-out;
+        &:hover {
+            opacity: 0.85;
+        }
+}
+
+// Visibility
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}

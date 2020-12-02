@@ -1,0 +1,63 @@
+.works { 
+    
+    .works-container {
+        padding-top: 32px;
+    }
+    &__main-title {
+        margin-top: 2.625rem;
+        color: $darkBlue;
+
+        @include breakpoint-down(medium) {
+            text-align: center;
+        }
+    }
+
+    &__all-publications {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .works-publications {
+            background: $white;
+            box-shadow: 0px 0px 5px 0px $darkBlueBorder;
+            flex: 1;
+            padding: 0.46875rem;
+            margin: 0.46875rem;
+            
+            @include breakpoint-down(medium) {
+                text-align: center;
+                margin-bottom: 20px;
+
+            }
+
+
+            .work__img {
+
+                img {
+                    width: 19.75rem;
+                    height: 12.5rem;
+                }
+            }
+
+            .work__title {
+                font-weight: 300;
+                color: $darkBlue;
+
+                h4 {
+                    padding: 12px 0 12px 0;
+                    margin-bottom: 0;
+
+                }
+                p {
+                    margin-top: 0;
+                    font-size: $font-sm;
+                }
+            }
+
+            .work__description {
+                line-height: 1.5;
+                font-size: 1rem;
+            }
+        }
+    }
+}
